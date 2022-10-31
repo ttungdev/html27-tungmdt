@@ -82,7 +82,7 @@ MAC:
 + Config username : git config --global user.name '<name>'
 + Add toàn bộ file change: git add .
 + Tạo commit mô tả: git commit -m 'homework1'
-+ git push
++ Push code: git push
 - Những lần sau:
 + Add toàn bộ file change: git add .
 + Tạo commit mô tả: git commit -m 'homework1'
