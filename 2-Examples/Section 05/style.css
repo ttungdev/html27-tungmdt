@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  color: blue;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-right: 10px;
+}
+
+.main-content {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.right-side-bar {
+  background-color: lightblue;
+}
+
+.left-side-bar div {
+  border-bottom: 1px solid black;
+  margin: 20px;
+}
