@@ -19,14 +19,31 @@ li {
 
 .main-content {
   display: flex;
-  margin-bottom: 10px;
+  position: relative;
+  /* left: 200px; */
 }
 
-.right-side-bar {
+.content {
+  position: absolute;
+  width: 800px;
+  left: 400px;
+}
+.right {
   background-color: lightblue;
+  position: absolute;
+  right:20px;
+  width: 300px;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
 
-.left-side-bar div {
+
+.left {
+  margin: 20px;
+  float: left;
+}
+
+.row {
   border-bottom: 1px solid black;
   margin: 20px;
 }
