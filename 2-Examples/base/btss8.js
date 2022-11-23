@@ -55,19 +55,6 @@ function bt5() {
   document.getElementById("bt5").innerHTML = n;
 }
 
-// function bt6() {
-//   let a = parseInt(prompt("nhap so"));
-//   let b = parseInt(prompt("nhap so"));
-//   while (a != b) {
-//     if (a > b) {
-//       a -= b;
-//     } else {
-//       b -= a;
-//     }
-//   }
-//   console.log();
-// }
-
 function bt6() {
   let a = parseInt(prompt("nhap so"));
   let b = parseInt(prompt("nhap so"));
@@ -93,8 +80,42 @@ function bt7() {
     }
     console.log(newLetters);
     return newLetters;
-  }
-  var text = prompt('Nhap chu');
+  };
+  var text = prompt("Nhap chu");
   var swappedText = swapCase(text);
   document.getElementById("bt7").innerHTML = swapCase(text);
+}
+
+function bt8() {
+  let counter = prompt("nhap chuoi ");
+  let str = counter.split(" ");
+  console.log(str);
+  for (let i = 0; i < str.length; i++) {
+    const element = str[i];
+    console.log(element.length);
+  }
+}
+function bt9() {
+  let n = parseInt(prompt("Nhap so"));
+  console.log(n);
+  for (let i = 2; i <= n; i++) {
+    let dem = 0;
+    while (n % i === 0) {
+      ++dem;
+      n /= i;
+    }
+    if (dem) {
+      console.log(i);
+      if (dem > 1) {
+        console.log("^" + dem);
+      }
+      if (n > i) {
+        console.log("*");
+      }
+    }
+  }
+}
+
+function bt10() {
+  
 }

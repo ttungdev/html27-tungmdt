@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+  <div>
+    <select
+      name="city"
+      id="selectCity"
+      onchange="handleChangeCity()"
+    >
+      <option value="1">Ha Noi</option>
+      <option value="2">Ho Chi Minh</option>
+      <option value="3">Da Nang</option>
+    </select>
+  </div>
+  
+    <select
+      name="district"
+      id="selectDistrict"
+      onchange="handleChangeDistrict()"
+    >
+    </select>
+  
+  <div>
+    <select
+      name="wards"
+      id="selectWards"
+    >
+    </select>
+  </div>
+  
+
+  <button>Submit</button>
+
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery/jquery.validate.min.js"></script>
+    <script src="./demo.js"></script>
+</body>
+
+</html>
