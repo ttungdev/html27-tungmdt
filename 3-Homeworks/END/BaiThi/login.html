@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- <header></header> -->
+    <form id="myForm" class="w-50 m-auto mt-3" onsubmit="handleSubmit(); return false;">
+        <div class="mb3-3">
+            <label for="" class="form-label">UserName</label>
+            <input type="text" class="form-control" name="name" id="inputName" />
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword">
+        </div>
+        <!-- <button type="reset" class="btn btn-primary">Reset</button> -->
+        <button onclick="handleLogin()" class="btn btn-success">Login</button>
+    </form>
+
+    <script>
+        function handleLogin() {
+            console.log('login');
+            let inputName = document.getElementById('inputName').value
+            let inputPwd = document.getElementById('inputPassword').value
+            console.log(inputName, inputPwd);
+            if (inputName === 'admin' && inputPwd === 'admin') {
+                window.location.href = './project.html?islogin=1'
+                alert('login thanh cong') 
+            } else {
+                alert('Thông tin không chính xác. Xin thử lại.')
+            }
+        }
+    </script>
+
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery/jquery.validate.min.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+
+</html>

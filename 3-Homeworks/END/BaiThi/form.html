@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <form id="myForm" class="w-50 m-auto mt-3" onsubmit="return false;">
+        <div class="mb3-3">
+            <label for="" class="form-label">Name Project</label>
+            <input type="text" class="form-control" name="project" id="inputProject" />
+        </div>
+        <div class="mb3-3">
+            <label for="" class="form-label">Name </label>
+            <input type="text" class="form-control" name="name" id="inputName" />
+        </div>
+        <!-- <div class="mb-3">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword">
+        </div> -->
+        <!-- <button type="reset" class="btn btn-primary">Reset</button> -->
+        <button onclick="handleCreate()" class="btn btn-success">Create</button>
+    </form>
+    <script>
+        function handleCreate() {
+            let inputName = document.getElementById("inputName");
+            let inputProject = document.getElementById("inputProject");
+            let data = {
+                name: inputName.value,
+                project: inputProject.value,
+            }
+            postUser();
+        }
+        function postUser(data) {
+            console.log(data);
+            let url = "https://63758f5b48dfab73a4fb0332.mockapi.io/project";
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
+    </script>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery/jquery.validate.min.js"></script>
+</body>
+
+</html>

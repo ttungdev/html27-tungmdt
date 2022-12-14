@@ -11,8 +11,6 @@ let settings = {
   rules: {
     name: {
       required: true,
-      regex:
-        /[^a-z0-9A-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]/u,
     },
     email: {
       required: true,
@@ -24,7 +22,6 @@ let settings = {
   messages: {
     name: {
       required: "Bạn chưa nhập tên",
-      regex: "chi duoc nhap chu",
     },
     email: {
       required: "nhap email",
